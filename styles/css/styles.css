@@ -14,12 +14,70 @@ body {
   color: #000000;
 }
 
+.fa {
+  padding: 20px;
+  font-size: 40px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
 .main {
   position: relative;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+  justify-items: baseline;
+  background: #feee03;
+  background: linear-gradient(to bottom, #feee03 8%, #fdcc08 92%);
+  color: #000000;
+  padding: 15px 80px;
+}
+
 /* Nav Bar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+}
+
 .nav {
+  border-bottom: 1px solid #feee03;
   display: flex;
   justify-content: space-between;
   justify-items: baseline;
@@ -28,12 +86,14 @@ body {
 }
 .nav .logo {
   width: 65%;
-}
-.nav .logo span {
   font-size: 28px;
   text-align: left;
   font-weight: bold;
-  color: #5c5858;
+  color: #743232e1;
+}
+.nav .logo span {
+  font-size: 34px !important;
+  color: #662c2c;
 }
 .nav .nav-links {
   width: 35%;
@@ -43,42 +103,145 @@ body {
 }
 .nav .nav-links a {
   text-decoration: none;
-  color: inherit;
-  font-size: 20px;
+  color: #662c2c;
+  font-size: 18px;
   transition: 0.3s;
-  width: 25%;
-}
-.nav .nav-links a:nth-child(1), .nav .nav-links a:nth-child(2) {
-  width: 22% !important;
+  width: 33.33%;
 }
 .nav .nav-links a:hover {
   filter: opacity(0.6);
+  text-decoration: underline;
 }
 
 .header {
   background: #feee03;
   background: linear-gradient(to bottom, #feee03 8%, #fdcc08 92%);
   max-width: 1366px;
-  margin: auto;
-  height: 600px;
+  margin: 72px auto;
   padding: 0 80px;
   overflow: hidden;
 }
 .header .content {
   display: flex;
+  justify-content: space-between;
 }
 .header .content .image {
-  width: 40%;
-  border-radius: 0px;
+  border-radius: 30px;
+  margin: 40px 0;
+  padding: 4px 7px;
+  background-color: #fdcc08;
+  box-shadow: 22px 22px 28px #f1e203, -22px -22px 28px #fffa03;
 }
 .header .content .image img {
-  width: 520px;
-  height: 600px;
+  max-width: 470px;
+  width: 470px;
+  height: 500px;
+  border-radius: 33px;
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
 }
 .header .content .note {
-  background: #feee03;
-  background: linear-gradient(to bottom, #fde700 8%, #fdcc08 92%);
-  box-shadow: 28px 28px 57px #6d6d6a, -28px -28px 57px #ffff03;
+  width: 60%;
+  border-radius: 0px;
+  max-width: 400px;
+  margin: auto;
+}
+.header .content .note .content {
+  display: block;
+  padding: 50px 40px;
+  height: 400px;
+  font-size: 40px;
+  text-align: center;
+  box-shadow: 22px 22px 28px #f1e203, -22px -22px 28px #f1e203;
+}
+.header .content .note .content h2 {
+  font-size: 42px;
+  color: #522727;
+  font-weight: lighter;
+}
+.header .content .note .content h2 b {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.about {
+  padding: 72px 80px;
+}
+.about .container {
+  display: flex;
+}
+.about .container .img {
+  width: 40%;
+}
+.about .container .img img {
+  max-width: 400px;
+}
+.about .container .lit {
+  padding: 5px 80px;
+}
+.about .container .lit h2 {
+  font-size: 40px;
+}
+.about .container .lit h3 {
+  font-size: 32px;
+}
+.about .container .lit h2,
+.about .container .lit h3 {
+  color: #522727;
+  margin: 0 !important;
+}
+.about .container .lit p {
+  color: #662c2c;
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.skills {
+  color: #662c2c;
+}
+.skills .bar {
+  width: 600px;
+  height: 20px;
+  background: #c4c4c4;
+}
+.skills .bar .level {
+  background: #662c2c;
+  height: 100%;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact {
+  padding: 30px 80px;
+}
+.contact h1,
+.contact h2,
+.contact h3 {
+  color: #522727;
+}
+.contact .container {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .container .social-links {
+  width: 50%;
+  padding: 70px 0;
+}
+.contact .container .form {
+  width: 50%;
+}
+.contact .container .form input[type=text],
+.contact .container .form select,
+.contact .container .form textarea {
+  font-family: inherit;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
 /*# sourceMappingURL=styles.css.map */
