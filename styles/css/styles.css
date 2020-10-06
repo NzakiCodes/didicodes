@@ -1,0 +1,84 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Apercu", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+::selection {
+  background-color: #feee03;
+  color: #000000;
+}
+
+.main {
+  position: relative;
+}
+
+/* Nav Bar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: baseline;
+  color: #000000;
+  padding: 15px 80px;
+}
+.nav .logo {
+  width: 65%;
+}
+.nav .logo span {
+  font-size: 28px;
+  text-align: left;
+  font-weight: bold;
+  color: #5c5858;
+}
+.nav .nav-links {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start !important;
+}
+.nav .nav-links a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+  transition: 0.3s;
+  width: 25%;
+}
+.nav .nav-links a:nth-child(1), .nav .nav-links a:nth-child(2) {
+  width: 22% !important;
+}
+.nav .nav-links a:hover {
+  filter: opacity(0.6);
+}
+
+.header {
+  background: #feee03;
+  background: linear-gradient(to bottom, #feee03 8%, #fdcc08 92%);
+  max-width: 1366px;
+  margin: auto;
+  height: 600px;
+  padding: 0 80px;
+  overflow: hidden;
+}
+.header .content {
+  display: flex;
+}
+.header .content .image {
+  width: 40%;
+  border-radius: 0px;
+}
+.header .content .image img {
+  width: 520px;
+  height: 600px;
+}
+.header .content .note {
+  background: #feee03;
+  background: linear-gradient(to bottom, #fde700 8%, #fdcc08 92%);
+  box-shadow: 28px 28px 57px #6d6d6a, -28px -28px 57px #ffff03;
+}
+
+/*# sourceMappingURL=styles.css.map */
